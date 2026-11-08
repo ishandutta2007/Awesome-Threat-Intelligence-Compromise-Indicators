@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Threat-Intelligence-Compromise-Indicators/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Threat-Intelligence-Compromise-Indicators?style=social&color=white" alt="GitHub stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Threat-Intelligence-Compromise-Indicators/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Threat-Intelligence-Compromise-Indicators?style=social&color=white" alt="GitHub_Stars"/></a>
   <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"/></a>
   <a href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" alt="License: CC0-1.0"/></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -60,75 +60,75 @@ Below is a curated comparison of top commercial Threat Intelligence and Indicato
 
 ## 🟩 Open-Source Software 🔓
 
-Self-hosted, community-driven threat intelligence tools, IOC collectors, and security orchestration frameworks. Ranked by **GitHub Stars** (descending). 🌟
+Self-hosted, community-driven threat intelligence tools, IOC collectors, and security orchestration frameworks. Ranked by **GitHub_Stars** (descending). 🌟
 
-### 1. Sigma [![GitHub stars](https://img.shields.io/github/stars/SigmaHQ/sigma?style=social&color=white)](https://github.com/SigmaHQ/sigma/stargazers) 📜
+### 1. Sigma [![GitHub_Stars](https://img.shields.io/github/stars/SigmaHQ/sigma?style=social&color=white)](https://github.com/SigmaHQ/sigma/stargazers) 📜
 - **Repository:** [SigmaHQ/sigma](https://github.com/SigmaHQ/sigma)
 - **Stack:** Python / YAML | **License:** CC-BY-4.0 & MIT
 - **Description:** Generic signature format for SIEM systems. While not a pure TIP, Sigma provides the industry-standard collaborative rule set for turning indicators and attack behaviors into actionable detection queries across Splunk, Elasticsearch, Microsoft Sentinel, and QRadar.
 - **Best For:** SOC analysts, detection engineers, and threat hunters translating IOCs and TTPs into vendor-agnostic detection rules.
 
-### 2. OpenCTI [![GitHub stars](https://img.shields.io/github/stars/OpenCTI-Platform/opencti?style=social&color=white)](https://github.com/OpenCTI-Platform/opencti/stargazers) 🕸️
+### 2. OpenCTI [![GitHub_Stars](https://img.shields.io/github/stars/OpenCTI-Platform/opencti?style=social&color=white)](https://github.com/OpenCTI-Platform/opencti/stargazers) 🕸️
 - **Repository:** [OpenCTI-Platform/opencti](https://github.com/OpenCTI-Platform/opencti)
 - **Stack:** Node.js / Python / GraphQL / Elasticsearch / Redis | **License:** Apache-2.0
 - **Description:** Leading open-source knowledge graph platform for Cyber Threat Intelligence built directly on the STIX 2.1 data specification. It structures correlations between threat actors, campaigns, intrusion sets, malware families, vulnerabilities, and IOCs with bidirectional MISP synchronization.
 - **Best For:** CTI teams requiring structured STIX-native knowledge graphs, analyst investigation canvases, and multi-tenant threat intelligence ingestion.
 
-### 3. Maltrail [![GitHub stars](https://img.shields.io/github/stars/stamparm/maltrail?style=social&color=white)](https://github.com/stamparm/maltrail/stargazers) 🚨
+### 3. Maltrail [![GitHub_Stars](https://img.shields.io/github/stars/stamparm/maltrail?style=social&color=white)](https://github.com/stamparm/maltrail/stargazers) 🚨
 - **Repository:** [stamparm/maltrail](https://github.com/stamparm/maltrail)
 - **Stack:** Python | **License:** GPL-2.0
 - **Description:** Lightweight, malicious traffic detection system that consumes public blacklist feeds and custom IOC lists to detect traffic to known malicious IPs, command & control (C2) servers, botnets, and malware domains in real time.
 - **Best For:** Fast network-level detection and passive DNS/traffic inspection against known indicator blacklists.
 
-### 4. MISP (Malware Information Sharing Platform) [![GitHub stars](https://img.shields.io/github/stars/MISP/MISP?style=social&color=white)](https://github.com/MISP/MISP/stargazers) 🤝
+### 4. MISP (Malware Information Sharing Platform) [![GitHub_Stars](https://img.shields.io/github/stars/MISP/MISP?style=social&color=white)](https://github.com/MISP/MISP/stargazers) 🤝
 - **Repository:** [MISP/MISP](https://github.com/MISP/MISP)
 - **Stack:** PHP / Python / MySQL | **License:** AGPL-3.0
 - **Description:** The undisputed de-facto open-source standard for storing, sharing, and correlating indicators of compromise (IOCs), malware sample attributes, and vulnerability telemetry across global CSIRTs, ISACs, and CERT communities.
 - **Best For:** Organizations and national agencies participating in bilateral or community-wide threat indicator sharing networks.
 
-### 5. TheHive [![GitHub stars](https://img.shields.io/github/stars/TheHive-Project/TheHive?style=social&color=white)](https://github.com/TheHive-Project/TheHive/stargazers) 🐝
+### 5. TheHive [![GitHub_Stars](https://img.shields.io/github/stars/TheHive-Project/TheHive?style=social&color=white)](https://github.com/TheHive-Project/TheHive/stargazers) 🐝
 - **Repository:** [TheHive-Project/TheHive](https://github.com/TheHive-Project/TheHive)
 - **Stack:** Scala / Elasticsearch / Docker | **License:** AGPL-3.0 / Proprietary (v5+)
 - **Description:** Scalable, open-source security incident response platform tightly linked to MISP and Cortex. Enables SOC analysts to quickly ingest high-confidence IOCs, collaborate on security alerts, and track remediation tasks.
 - **Best For:** Incident responders and CSIRTs needing structured incident ticketing with native MISP indicator correlation.
 
-### 6. Loki [![GitHub stars](https://img.shields.io/github/stars/Neo23x0/Loki?style=social&color=white)](https://github.com/Neo23x0/Loki/stargazers) 🔍
+### 6. Loki [![GitHub_Stars](https://img.shields.io/github/stars/Neo23x0/Loki?style=social&color=white)](https://github.com/Neo23x0/Loki/stargazers) 🔍
 - **Repository:** [Neo23x0/Loki](https://github.com/Neo23x0/Loki)
 - **Stack:** Python / YARA | **License:** GPL-3.0
 - **Description:** Simple, free open-source IOC scanner. Scans systems for known indicators of compromise using MD5/SHA1/SHA256 hashes, YARA rules, hardcoded filenames, and regex checks.
 - **Best For:** Fast forensic triage and endpoint compromise verification during active incident response.
 
-### 7. Signature-Base [![GitHub stars](https://img.shields.io/github/stars/Neo23x0/signature-base?style=social&color=white)](https://github.com/Neo23x0/signature-base/stargazers) 🧬
+### 7. Signature-Base [![GitHub_Stars](https://img.shields.io/github/stars/Neo23x0/signature-base?style=social&color=white)](https://github.com/Neo23x0/signature-base/stargazers) 🧬
 - **Repository:** [Neo23x0/signature-base](https://github.com/Neo23x0/signature-base)
 - **Stack:** YARA / IOC text | **License:** CC-BY-NC-4.0
 - **Description:** Curated repository of IOCs, YARA signatures, IOC hashes, and file paths maintained by Nextron Systems and Florian Roth for immediate use with Loki, Thor, and other threat scanners.
 - **Best For:** Threat hunters seeking verified, regularly updated YARA rules and IOC signatures for advanced persistent threats (APTs).
 
-### 8. Fast Incident Response (FIR) [![GitHub stars](https://img.shields.io/github/stars/certsocietegenerale/FIR?style=social&color=white)](https://github.com/certsocietegenerale/FIR/stargazers) ⏱️
+### 8. Fast Incident Response (FIR) [![GitHub_Stars](https://img.shields.io/github/stars/certsocietegenerale/FIR?style=social&color=white)](https://github.com/certsocietegenerale/FIR/stargazers) ⏱️
 - **Repository:** [certsocietegenerale/FIR](https://github.com/certsocietegenerale/FIR)
 - **Stack:** Python / Django | **License:** AGPL-3.0
 - **Description:** Cybersecurity incident management platform created by CERT Société Générale. Designed to track incident workflows and associate IOCs directly with affected business units and infrastructure.
 - **Best For:** Small-to-medium CSIRTs looking for a straightforward, lightweight incident and IOC tracking console.
 
-### 9. Yeti [![GitHub stars](https://img.shields.io/github/stars/yeti-platform/yeti?style=social&color=white)](https://github.com/yeti-platform/yeti/stargazers) 🧊
+### 9. Yeti [![GitHub_Stars](https://img.shields.io/github/stars/yeti-platform/yeti?style=social&color=white)](https://github.com/yeti-platform/yeti/stargazers) 🧊
 - **Repository:** [yeti-platform/yeti](https://github.com/yeti-platform/yeti)
 - **Stack:** Python / FastAPI / React / ArangoDB | **License:** Apache-2.0
 - **Description:** Modular threat intelligence repository designed to organize IOCs, TTPs, and threat actors into an intuitive graph structure. Offers automated enrichment plugins, feed ingestion, and REST/GraphQL APIs.
 - **Best For:** Security teams seeking an agile, modern graph-based alternative to heavy legacy TIP deployments.
 
-### 10. Cortex [![GitHub stars](https://img.shields.io/github/stars/TheHive-Project/Cortex?style=social&color=white)](https://github.com/TheHive-Project/Cortex/stargazers) 🧠
+### 10. Cortex [![GitHub_Stars](https://img.shields.io/github/stars/TheHive-Project/Cortex?style=social&color=white)](https://github.com/TheHive-Project/Cortex/stargazers) 🧠
 - **Repository:** [TheHive-Project/Cortex](https://github.com/TheHive-Project/Cortex)
 - **Stack:** Python / Scala / Docker | **License:** AGPL-3.0
 - **Description:** Observable analysis and active response engine. Accepts observables (IPs, domains, hashes, URLs) from TheHive or scripts, executing 100+ modular analyzers (VirusTotal, Shodan, AbuseIPDB) to return enriched threat context.
 - **Best For:** Automating IOC enrichment and triage pipelines across multiple external OSINT feeds.
 
-### 11. AdversaryGraph [![GitHub stars](https://img.shields.io/github/stars/anpa1200/adversarygraph?style=social&color=white)](https://github.com/anpa1200/adversarygraph/stargazers) 📊
+### 11. AdversaryGraph [![GitHub_Stars](https://img.shields.io/github/stars/anpa1200/adversarygraph?style=social&color=white)](https://github.com/anpa1200/adversarygraph/stargazers) 📊
 - **Repository:** [anpa1200/adversarygraph](https://github.com/anpa1200/adversarygraph)
 - **Stack:** Python / Streamlit | **License:** GPL-3.0
 - **Description:** AI-assisted threat intelligence tool designed for MITRE ATT&CK analysis and adversary profiling. Features local LLM support, Jaccard overlap scoring for adversary campaigns, and STIX 2.1 export to OpenCTI.
 - **Best For:** CTI researchers needing local LLM-assisted TTP mapping and attribution analysis.
 
-### 12. vamp-darkweb-intel [![GitHub stars](https://img.shields.io/github/stars/Vampsecure-Labs/vamp-darkweb-intel?style=social&color=white)](https://github.com/Vampsecure-Labs/vamp-darkweb-intel/stargazers) 🦇
+### 12. vamp-darkweb-intel [![GitHub_Stars](https://img.shields.io/github/stars/Vampsecure-Labs/vamp-darkweb-intel?style=social&color=white)](https://github.com/Vampsecure-Labs/vamp-darkweb-intel/stargazers) 🦇
 - **Repository:** [Vampsecure-Labs/vamp-darkweb-intel](https://github.com/Vampsecure-Labs/vamp-darkweb-intel)
 - **Stack:** Python | **License:** MIT
 - **Description:** Zero-dependency CLI utility for rapid IOC investigation and dark web leak correlation. Simultaneously queries public threat feeds (ThreatFox, URLhaus, MalwareBazaar, Ransomware.live, GreyNoise) and flags correlated threats.
@@ -190,7 +190,7 @@ Contributions are welcome! If you know of an open-source Threat Intelligence pla
 
 Please follow these guidelines:
 1. Ensure the repository is actively maintained (commits or releases within the past 12 months).
-2. Follow the standard entry format: Name, GitHub Star Badge, Repository link, Tech Stack & License, Short Description, and "Best For" summary.
+2. Follow the standard entry format: Name, GitHub Stars_Badge, Repository link, Tech Stack & License, Short Description, and "Best For" summary.
 3. Open a descriptive Pull Request with relevant documentation.
 
 ---
