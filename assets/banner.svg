@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background Linear Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="cyberGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <linearGradient id="threatRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#fb7185"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-red" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .radar-sweep {
+        transform-origin: 1040px 180px;
+        animation: rotateRadar 8s linear infinite;
+      }
+      @keyframes rotateRadar {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      .pulse-ring {
+        transform-origin: 1040px 180px;
+        animation: pulseRing 3s ease-out infinite;
+      }
+      @keyframes pulseRing {
+        0% { r: 20px; opacity: 0.8; }
+        50% { opacity: 0.4; }
+        100% { r: 110px; opacity: 0; }
+      }
+
+      .pulse-beacon {
+        animation: blinkBeacon 2s ease-in-out infinite alternate;
+      }
+      @keyframes blinkBeacon {
+        0% { opacity: 0.3; transform: scale(0.95); }
+        100% { opacity: 1; transform: scale(1.05); }
+      }
+
+      .threat-node {
+        animation: floatNode 4s ease-in-out infinite alternate;
+      }
+      @keyframes floatNode {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-8px); }
+      }
+
+      .grid-lines {
+        stroke: #334155;
+        stroke-opacity: 0.25;
+        stroke-dasharray: 4 4;
+      }
+
+      .cyber-pill {
+        transition: all 0.3s ease;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)"/>
+  <rect width="1196" height="356" x="2" y="2" rx="14" fill="none" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- Background Decorative Grid -->
+  <g class="grid-lines">
+    <line x1="60" y1="0" x2="60" y2="360" />
+    <line x1="200" y1="0" x2="200" y2="360" />
+    <line x1="340" y1="0" x2="340" y2="360" />
+    <line x1="480" y1="0" x2="480" y2="360" />
+    <line x1="620" y1="0" x2="620" y2="360" />
+    <line x1="760" y1="0" x2="760" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="140" x2="1200" y2="140" />
+    <line x1="0" y1="220" x2="1200" y2="220" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+  </g>
+
+  <!-- Interactive / Dynamic Radar Threat Scanner Display (Right Aligned) -->
+  <g id="radar-display">
+    <circle cx="1040" cy="180" r="110" fill="#0f172a" fill-opacity="0.6" stroke="#1e293b" stroke-width="2"/>
+    <circle cx="1040" cy="180" r="80" fill="none" stroke="#334155" stroke-dasharray="3 3"/>
+    <circle cx="1040" cy="180" r="50" fill="none" stroke="#334155" stroke-dasharray="3 3"/>
+    <circle cx="1040" cy="180" r="20" fill="none" stroke="#38bdf8" stroke-opacity="0.5"/>
+
+    <!-- Crosshairs -->
+    <line x1="920" y1="180" x2="1160" y2="180" stroke="#334155" stroke-width="1.5"/>
+    <line x1="1040" y1="60" x2="1040" y2="300" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Animated Radar Pulse Rings -->
+    <circle class="pulse-ring" cx="1040" cy="180" r="30" fill="none" stroke="#06b6d4" stroke-width="2"/>
+
+    <!-- Rotating Radar Scanner Beam -->
+    <g class="radar-sweep">
+      <path d="M1040,180 L1150,140 A110,110 0 0,0 1040,70 Z" fill="url(#cyberGreen)" fill-opacity="0.25"/>
+      <line x1="1040" y1="180" x2="1150" y2="140" stroke="#10b981" stroke-width="2" filter="url(#glow-cyan)"/>
+    </g>
+
+    <!-- Dynamic Threat Blips / Indicators on Scanner -->
+    <g class="threat-node">
+      <circle cx="1085" cy="130" r="4.5" fill="#f43f5e" filter="url(#glow-red)" class="pulse-beacon"/>
+      <text x="1095" y="133" fill="#fca5a5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="10" font-weight="600">APT-29 [CRITICAL]</text>
+    </g>
+    <g class="threat-node" style="animation-delay: -1.5s;">
+      <circle cx="985" cy="220" r="4" fill="#fbbf24" class="pulse-beacon"/>
+      <text x="940" y="235" fill="#fde68a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="9" font-weight="500">C2 Beacon (IP)</text>
+    </g>
+    <g class="threat-node" style="animation-delay: -2.5s;">
+      <circle cx="1070" cy="240" r="3.5" fill="#38bdf8" class="pulse-beacon"/>
+      <text x="1080" y="245" fill="#bae6fd" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="9" font-weight="500">YARA Match</text>
+    </g>
+  </g>
+
+  <!-- Foreground Main Branding & Typography -->
+  <g id="brand-content" transform="translate(60, 45)">
+    <!-- Category Pill Badge -->
+    <rect class="cyber-pill" width="220" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.8"/>
+    <circle cx="14" cy="14" r="5" fill="#10b981" filter="url(#glow-cyan)" class="pulse-beacon"/>
+    <text x="28" y="18" fill="#e2e8f0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="12" font-weight="700" letter-spacing="1">CURATED INTELLIGENCE</text>
+
+    <!-- Main Title (Clean Foreground) -->
+    <text x="0" y="78" fill="url(#titleGrad)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif" font-size="34" font-weight="900" letter-spacing="-0.5">Awesome Threat Intelligence</text>
+    <text x="0" y="118" fill="#f1f5f9" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif" font-size="30" font-weight="800" letter-spacing="-0.5">&amp; Indicators of Compromise (IOCs)</text>
+
+    <!-- Subtitle / Mission Statement -->
+    <text x="0" y="156" fill="#94a3b8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="400">
+      The authoritative index of Threat Intelligence Platforms (TIP), STIX/TAXII pipelines,
+    </text>
+    <text x="0" y="178" fill="#94a3b8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="400">
+      adversary profiling frameworks, automated IOC enrichment tools, and OSINT feeds.
+    </text>
+
+    <!-- Dynamic Metric & Feature Badges -->
+    <g transform="translate(0, 205)">
+      <!-- Feature Card 1 -->
+      <g>
+        <rect width="135" height="42" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="18" fill="#38bdf8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="10" font-weight="700">PLATFORMS</text>
+        <text x="14" y="33" fill="#f8fafc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="12" font-weight="600">Enterprise SaaS</text>
+      </g>
+
+      <!-- Feature Card 2 -->
+      <g transform="translate(150, 0)">
+        <rect width="135" height="42" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="18" fill="#10b981" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="10" font-weight="700">COMMUNITY</text>
+        <text x="14" y="33" fill="#f8fafc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="12" font-weight="600">Open-Source TIPs</text>
+      </g>
+
+      <!-- Feature Card 3 -->
+      <g transform="translate(300, 0)">
+        <rect width="135" height="42" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="18" fill="#c084fc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="10" font-weight="700">CORRELATION</text>
+        <text x="14" y="33" fill="#f8fafc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="12" font-weight="600">STIX 2.1 &amp; ATT&amp;CK</text>
+      </g>
+
+      <!-- Feature Card 4 -->
+      <g transform="translate(450, 0)">
+        <rect width="145" height="42" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="18" fill="#f43f5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="10" font-weight="700">DETECTION</text>
+        <text x="14" y="33" fill="#f8fafc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="12" font-weight="600">Sigma &amp; YARA Rules</text>
+      </g>
+    </g>
+  </g>
+</svg>
